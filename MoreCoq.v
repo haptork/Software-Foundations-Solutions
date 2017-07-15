@@ -119,9 +119,7 @@ Theorem rev_exercise1 : forall (l l' : list nat),
      l' = rev l.
 Proof.
   intros l l' H.
-  rewrite <- rev_involutive.
-  rewrite -> H.
-  rewrite -> rev_involutive.
+  rewrite H.
   symmetry.
   apply rev_involutive.
 Qed.
